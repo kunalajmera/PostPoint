@@ -1,0 +1,23 @@
+<link rel="stylesheet" href="/css/sign_in.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+<div class="hero">
+    <div class="form-box">
+        <div class="button-box">
+            <div id="btn"></div>
+            <button type="button" class="toggle-btn"><a href="/users/sign_in" style="text-decoration: none; color: black;">Sign in</a></button>
+            <button type="button" class="toggle-btn"><a href="/users/sign_up" style="text-decoration: none; color: black;">Sign up</a></button>
+        </div>
+        <form action="/users/createsession" method="POST" class="input-group">
+            <input type="email" class="input-field" name="email" placeholder="User Id" required>
+            <input type="text" class="input-field" name="password" placeholder="Enter Password" required> 
+            <button type="submit" class="submit-btn">Sign in</button><br>
+                    <div class="icon">
+                        <i class="fab fa-google" style="margin-left:60px;"></i><br>
+                        <a href="/users/auth/google" style="text-decoration: none; color:black;">SignIn With Google</a>
+                    </div>
+        </form>
+       
+    </div>
+</div>
+       
+       

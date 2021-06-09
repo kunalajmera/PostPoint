@@ -1,0 +1,18 @@
+<link rel="stylesheet" href="/css/post.css">
+<div class="form-container">
+    <form action="/users/createpost" method="POST" class="form-wrap" enctype="multipart/form-data">
+        <h2>New Post</h2>
+        <div class="form-box">
+            <input type="text" name="title" placeholder="title">
+        </div>
+        <div class="form-box">
+            <textarea rows="25" cols="10" name="blog" placeholder="content"></textarea>
+        </div>
+        <div class="form-file">
+            <input type="file" name="myfile" placeholder="Choose file" required>
+        </div>
+        <div class="form-submit">
+            <input type="submit" value="Publish">
+        </div>
+    </form>
+</div>

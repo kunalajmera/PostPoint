@@ -1,0 +1,71 @@
+*{
+    padding:0px;
+    margin:0px;
+    box-sizing:border-box;
+}
+body{
+    background:white;
+}
+
+.form-container{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width:100%;
+    height:99vh;
+}
+.form-container .form-wrap{
+    width:70%;
+    background: white;
+    border-radius:2px;
+    padding:10px 14px;
+}
+.form-container .form-wrap h2{
+    text-align:center;
+    margin:0px 0px 20px;
+}
+.form-container .form-wrap .form-box{
+    margin:0px 0px 20px;
+}
+.form-container .form-wrap .form-box input[type="text"]{
+    padding:4px 9px;
+    width:100%;
+    border:1px solid black;
+    border-radius:3px;
+}
+.form-container .form-wrap .form-box textarea{
+    width:100%;
+    height:250px;
+    padding:4px 9px;
+    border:1px solid chocolate;
+    border-radius: 3px;
+}
+.form-container .form-wrap .form-submit{
+    display:flex;
+    justify-content:center;
+}
+.form-container .form-wrap .form-file{
+    display:flex;
+    justify-content:center;
+}
+.form-container .form-wrap .from-submit input[type="submit"]{
+    padding:4px 9px;
+    background:chocolate;
+    cursor:pointer;
+    font-size:17px;
+    font-weight:700;
+    border-radius: 2px;
+    color:cornsilk;
+    border:none;
+}
+.form-container .form-wrap .from-file input[type="file"]{
+    padding:4px 9px;
+    background:chocolate;
+    cursor:pointer;
+    font-size:17px;
+    font-weight:700;
+    border-radius: 2px;
+    color:cornsilk;
+   
+}
+

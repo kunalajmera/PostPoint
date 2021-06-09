@@ -1,0 +1,22 @@
+<link rel="stylesheet" href="/css/sign_up.css">
+<div class="hero">
+    <div class="form-box">
+        <div class="button-box">
+            <div id="btn"></div>
+            <button type="button" class="toggle-btn"><a href="/users/sign_in" style="text-decoration: none; color: black;">Sign in</a></button>
+            <button type="button" class="toggle-btn"><a href="/users/sign_up" style="text-decoration: none; color: black;">Sign up</a></button>
+        </div>
+        <form action="/users/create" method="POST" class="input-group">
+            <input type="email" class="input-field" name="email" placeholder="User Id" required>
+            <input type="text" class="input-field" name="password" placeholder="Enter Password" required>
+            <input type="text" class="input-field" name="confirmpassword" placeholder="Confirm Password" required>
+            <input type="text" class="input-field" name="username" placeholder="User" required>
+            <input type="submit" class="submit-btn" value="Signup">
+        </form>
+        <p>
+            <a href="/users/auth/google">Google SignIN/SignUp</a>
+        </p>
+    </div>
+</div>
+       
+       

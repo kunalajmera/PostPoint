@@ -1,0 +1,103 @@
+<!-- font awesome -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+<!-- google font -->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap" rel="stylesheet">
+<!-- our home css -->
+<link rel="stylesheet" href="/css/home.css">
+<!-- bootstrap -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<header>
+    <div class="logo">
+        <h1 class="logo-text"><span>Quotes</span>point</h1>
+    </div>
+    <i class="fa fa-bars menu-toggle"></i>
+    <ul class="nav">
+        <li><a href="/users/post">Post</a></li>
+        <li>
+            <a href="#">
+                <i class="fa fa-user"></i>
+                <%=locals.user.name%>
+                <i class="fa fa-chevron-down"></i>
+            </a>
+           
+            <ul>
+                <li><a href="/users/signout" style="text-decoration: none; color:red;">Sign out</a></li>
+            </ul>
+        </li>
+    </ul>
+</header>
+<div class="container">
+    <% for(post of posts){%>
+    <div style="padding:0px 5px 0px 5px;">
+            <div class="single-blog">
+                <div>
+                <p class="blog-meta">By <%=post.user.name%> <a href="/users/deletepost/<%=post._id%>" style="text-decoration: none; float:right; font-size: 1.5rem;">x</a></p>
+               
+                </div>
+                <b><%=post.title%></b><br>
+                <div style="background-size: contain; width:100%;" >
+                <img src="<%=post.avatar%>" width=50%;>
+                <div style="background-color: wheat; float:right; width:50%; border:2px solid black; padding:2px;">
+                    <h2>
+                        About the post:
+                    </h2>
+                    <p class="blog-text" style="box-sizing: border-box;"><%=post.content%></p>
+                </div>
+               
+               </div>
+                
+                <div>
+                    <span style="background-color: white; color:black;"><%=post.like.length%></span><i class="far fa-thumbs-up"></i><a href="/users/like/?id=<%=post._id%>&type=Post" style="text-decoration: none; color:black;">Like</a>
+                </div>
+            </div>
+    </div>
+    <div style="padding:0px 5px 0px 5px;">
+        <form method="POST" action="/users/createcomment">
+        <input type="text" name="comment" placeholder="Type comment here" id="commentbox"><br>
+        <input type="hidden" name="post" value="<%=post._id%>">
+        <input type="submit" value="Comment" id="submitbutton">
+        </form>
+        <%for(comment of post.comments){%>
+        <div style="background-color: white;padding:0px;border-bottom: 2px;">
+            <div style="padding:0px 5px 0px 5px;">
+                <div class="double-blog">
+                    <p class="blog-meta">By <%=comment.user.name%><a href="/users/deletecomment/<%=comment._id%>" style="text-decoration: none; float:right; font-size: 1.5rem;">x</a></p>
+                    
+                    <p class="blog-text"><%=comment.content%></p>
+                </div>
+                <div>
+                    <span style="background-color: white; color:black;"><%=comment.like.length%></span><i class="far fa-thumbs-up"></i><a href="/users/like/?id=<%=comment._id%>&type=Comment" style="text-decoration: none; color:black;">Like</a>
+                </div>
+            </div>
+                
+           
+        </div>
+        <%}%>
+    </div>
+    <%}%>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

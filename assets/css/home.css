@@ -1,0 +1,110 @@
+*{
+    box-sizing: border-box;
+}    
+
+header{
+    background-color: cornflowerblue;
+    height:66px;
+}
+header *{
+    color:white;
+}
+
+header .logo{
+    float:left;
+    
+    height:inherit;
+    margin-left: 2em;
+}
+header .logo-text{
+    margin:8px;
+}
+header .logo-text span{
+    color:maroon;
+}
+header ul{
+    float:right;
+    margin:0px;
+    padding:0px;
+    list-style: none;
+    
+}
+header ul li{
+    float:left;
+    position: relative;
+}
+header ul li a{
+    color:cornsilk;
+}
+header ul li ul{
+    position: absolute;
+    top:66px;
+    right:0px;
+    width:180px;
+    display:none;
+}
+header ul li:hover ul{
+    display:block;
+}
+header ul li ul li{
+    width:100%;
+}
+header ul li ul li a{
+    padding:10px;
+    background:rgb(245, 204, 204);
+}
+header ul li ul li a:hover{
+    background: grey;
+}
+header ul li a{
+    display:block;
+    padding:21px;
+    font-size: 1.1em;
+    text-decoration: none;
+}
+header ul li a:hover{
+    background: mediumorchid;
+    transition: 0.5s;
+}
+header .menu-toggle{
+    display:none;
+}
+
+.container{
+    display:grid;
+    
+}
+.single-blog{
+    box-shadow:0px 0px 20px 1px rgba(0,0,0,0.2);
+    padding:10px;
+    margin-top:30px;
+    background-color:wheat;
+}
+.blog-meta
+{
+    font-size:14px;
+    margin-bottom:2px;
+}
+.blog-text{
+    font-size:14px;
+    text-align:justify;
+}
+#commentbox{
+    width:60%;
+    height:40px;
+    background: none;
+    font-size: 15px;
+    color:white;
+    border-bottom:1px solid white;
+}
+#submitbutton{
+    height:30px;
+    width:160px;
+    background:#ff0033;
+    color:#fff;
+    cursor:pointer;
+    margin:10px 0;
+    font-size:15px;
+    box-shadow:0 3px 10px #111;
+    border-radius:5px;
+}
